@@ -1,0 +1,22 @@
+package bp1_2021;
+import java.util.Scanner;
+public class ProgramKasirBeras {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+        System.out.println("Program Kasir Beras");
+        System.out.print("Jumlah kg Beras yang Dibeli     : ");
+        float jumlahberas = input.nextFloat();
+        System.out.print("Harga Beras Per Kilo            : ");
+        float hargaberas = input.nextFloat();
+        double totalharga = jumlahberas*hargaberas;
+        System.out.println("Total Harga                     : " +totalharga);
+        System.out.println("Diskon                          : 5%"  );
+        double pascadiskon = totalharga-totalharga*5/100;
+        System.out.println("Total Bayar                     : " + pascadiskon);
+        System.out.print("Jumlah Bayar                    : ");
+        double jumlahbayar = input.nextDouble();
+        double kembalian = jumlahbayar-pascadiskon;
+        System.out.println("Total Kembalian                 : " +kembalian);
+    }
+}
